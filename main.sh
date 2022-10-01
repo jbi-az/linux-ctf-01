@@ -8,7 +8,7 @@ main()
 {  
    # Setup users
 	jasperj_pass="cyber123!"
-	useradd tutor -m -s /bin/bash 2>/dev/null 
+	useradd jasperj -m -s /bin/bash 2>/dev/null 
 	echo "jasperj:$jasperj_pass" | chpasswd
 
    # Application
