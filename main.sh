@@ -35,6 +35,7 @@ main()
    # ---> Target 1 <---
    # Mission 1-3
    mv html/* /var/www/html/ 
-   
+   sed -i 's/80/8880/g' /etc/nginx/sites-enabled/default 
+   service nginx reload 
 }
 main
