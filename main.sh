@@ -17,7 +17,7 @@ main()
 	echo "jasperj:$jasperj_pass" | chpasswd
 
    borish_pass="icarus123!@!" 
-   useradd borish --create-home --shell --gid 1051 --shell /bin/sh 2>/dev/null
+   useradd borish --create-home --gid 1051 --shell /bin/sh 2>/dev/null
 	echo "borish:$borish_pass" | chpasswd
 
    # Application
