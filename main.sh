@@ -53,7 +53,7 @@ main()
    cp -r mail /home/jasperj
    cd /home/jasperj
    tar -czf mail.tar.gz mail 
-   rm mail 
+   rm -r mail 
    mv mail.tar.gz mail 
 
    chown -R jasperj:webdesign /home/jasperj
