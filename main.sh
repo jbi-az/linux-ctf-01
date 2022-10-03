@@ -47,7 +47,7 @@ main()
    
    # Add noise 
    mkdir -p /home/jasperj/photos    
-   cp /var/www/html/team/* /home/jasperj/photos
+   cp /var/www/html/assets/img/team/* /home/jasperj/photos
 
    chown -R jasperj:webdesign /home/jasperj
 
