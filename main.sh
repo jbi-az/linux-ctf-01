@@ -16,7 +16,7 @@ main()
 	useradd jasperj --create-home --gid 1050 --shell /bin/bash --comment "Jasper Jolles,Web Design,+31 71 223 3777,,jasperj@ql-robotics.com" 2>/dev/null 
 	echo "jasperj:$jasperj_pass" | chpasswd
 
-   borish_pass="icarus123!@!" 
+   borish_pass="icarus123!@#" 
    useradd borish --create-home --gid 1051 --shell /bin/sh 2>/dev/null
 	echo "borish:$borish_pass" | chpasswd
    useradd laurensm --create-home --gid 1051 --shell /bin/sh --comment "Laurens Martha,Engineering,+49 30 175944864,,laurensm@ql-robotics.com" 2>/dev/null
@@ -32,10 +32,29 @@ main()
    # Application
    apt update && apt install -y zip figlet nginx 
  
-   # ---> Target 1 <---
-   # Mission 1-3
+   # ---> Target 1 <--- 
    mv html/* /var/www/html/ 
    sed -i 's/80/8880/g' /etc/nginx/sites-enabled/default 
    service nginx reload 
+
+   # ---> Target 2 <--- 
+   figlet -c "project icarus" > /etc/motd 
+   figlet -c "development" >> /etc/motd 
+   figlet -c "===" >> /etc/motd 
+   cat warning-message >> /etc/motd 
+
+   ln -s /home/jasperj /var/www/html/
+   
+   # Add noise 
+   mkdir -p /home/jasperj/photos    
+   cp /var/www/html/team/* /home/jasperj/photos
+
+   chown -R jasperj:webdesign /home/jasperj
+
+   #--> Target 3 <---
+   mkdir -p /usr/share/icarus   
+   cp icarus/icarus.pdf /usr/share/icarus/ 
+   chown -R laurensm:engineering /usr/share/icarus
+   chmod -R 770 /usr/share/icarus
 }
 main
