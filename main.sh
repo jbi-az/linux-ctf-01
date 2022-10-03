@@ -50,8 +50,8 @@ main()
    cp /var/www/html/assets/img/team/* /home/jasperj/photos
 
    # Mails
-   cp -r mail /home/jasper
-   cd /home/jasper
+   cp -r mail /home/jasperj
+   cd /home/jasperj
    tar -czf mail.tar.gz mail 
    rm mail 
    mv mail.tar.gz mail 
