@@ -49,16 +49,30 @@ main()
    mkdir -p /home/jasperj/photos    
    cp /var/www/html/assets/img/team/* /home/jasperj/photos
 
+   # Mails
+   cp -r mail /home/jasper
+   cd /home/jasper
+   tar -czf mail.tar.gz mail 
+   rm mail 
+   mv mail.tar.gz mail 
+
    chown -R jasperj:webdesign /home/jasperj
 
-   # Mails
-
+   cd ~/linux-ctf-01
+   
    #--> Target 3 <---
    mkdir -p /usr/share/icarus   
    xxd -p icarus/icarus.pdf | sed -n '1,5000p' > /usr/share/icarus/i-part-1
    xxd -p icarus/icarus.pdf | sed -n '5001,10000p' > /usr/share/icarus/i-part-2
    xxd -p icarus/icarus.pdf | sed -n '10001,15000p' > /usr/share/icarus/i-part-3
    xxd -p icarus/icarus.pdf | sed -n '15000,$p' > /usr/share/icarus/i-part-4
+   cd /usr/share/icarus
+   zip -P 76202729 drip.zip * 
+   mv drip.zip drip  
+
+   cd ~/linux-ctf-01
+   cat boris-history > /home/borish/.bash_history 
+  
    chown -R laurensm:engineering /usr/share/icarus/
    chmod -R 770 /usr/share/icarus
 }

@@ -1,0 +1,10 @@
+ping 172.31.0.18
+wget index.html
+nano test
+mv drip drip.zip
+unzip -P 76202729
+cd drip 
+cat * > icarus
+xxd -r -p icarus
+rm icarus
+exit 

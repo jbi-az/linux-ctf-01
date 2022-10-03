@@ -1,0 +1,24 @@
+From: Laurens Martha <laurensm@ql-robotics.com>
+Sent: Thursday, October 3, 2022 7:05 PM
+To:  Jasper Jolles <jasperj@ql-robotics.com>
+Subject: Confidential - instruction  
+
+Hi Jasper,
+
+Hereby the instruction. Keep confidential and delete everything when finished. 
+
+1. There is a compressed file 'drip' in /usr/share/icarus that has the design.
+
+2. Decompress the file. It is password protected, I will send the passcode by Whatsapp
+
+3. Concate the four parts into a new file 
+
+4. It is raw hexadecimal output, compile into binary with the command 'xxd -r -p file' 
+
+5. You can open the file on any desktop machine.
+
+If you have any questions, feel free to reach out.
+
+Kind regards,
+Laurens Martha
+Lead engineer / project-i
