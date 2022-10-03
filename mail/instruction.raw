@@ -11,9 +11,10 @@ Hereby the instruction. Keep confidential and delete everything when finished.
 
 2. Decompress the file. It is password protected, I will send the passcode by Whatsapp
 
-3. Concate the four parts into a new file 
+3. Concate the four parts into a new file called 'tmp' 
 
-4. It is raw hexadecimal output, compile into binary with the command 'xxd -r -p file' 
+4. This file is raw hexadecimal output, compile into binary with the command 'xxd -r -p tmp'
+   and redirect to a file called 'icarus' 
 
 5. You can open the file on any desktop machine.
 

@@ -4,7 +4,7 @@ nano test
 mv drip drip.zip
 unzip -P 76202729 drip.zip
 cd drip 
-cat * > icarus
-xxd -r -p icarus
+cat * > tmp 
+xxd -r -p tmp > icarus
 rm icarus
 exit 
