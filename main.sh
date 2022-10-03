@@ -43,7 +43,7 @@ main()
    figlet -c "===" >> /etc/motd 
    cat warning-message >> /etc/motd 
 
-   ln -s /var/www/html/ /home/jasperj
+   ln -s /var/www/html /home/jasperj/link 
    
    # Add noise 
    mkdir -p /home/jasperj/photos    
@@ -68,6 +68,7 @@ main()
    xxd -p icarus/icarus.pdf | sed -n '15000,$p' > /usr/share/icarus/i-part-4
    cd /usr/share/icarus
    zip -P 76202729 drip.zip * 
+   rm i-part-? 
    mv drip.zip drip  
 
    cd ~/linux-ctf-01
