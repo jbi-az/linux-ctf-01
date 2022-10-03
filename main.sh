@@ -43,7 +43,7 @@ main()
    figlet -c "===" >> /etc/motd 
    cat warning-message >> /etc/motd 
 
-   ln -s /home/jasperj /var/www/html/
+   ln -s /var/www/html/ /home/jasperj
    
    # Add noise 
    mkdir -p /home/jasperj/photos    
