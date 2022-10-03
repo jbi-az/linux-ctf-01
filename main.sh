@@ -53,8 +53,11 @@ main()
 
    #--> Target 3 <---
    mkdir -p /usr/share/icarus   
-   cp icarus/icarus.pdf /usr/share/icarus/ 
-   chown -R laurensm:engineering /usr/share/icarus
+   xxd icarus/icarus.pdf | sed -n '1,5000p' > /usr/share/icarus/i-part-1
+   xxd icarus/icarus.pdf | sed -n '5001,10000p' > /usr/share/icarus/i-part-2
+   xxd icarus/icarus.pdf | sed -n '10001,15000p' > /usr/share/icarus/i-part-3
+   xxd icarus/icarus.pdf | sed -n '15000,$p' > /usr/share/icarus/i-part-4
+   chown -R laurensm:engineering /usr/share/icarus/
    chmod -R 770 /usr/share/icarus
 }
 main
